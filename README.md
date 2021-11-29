@@ -4,11 +4,15 @@
 
 ## Overview
 
-#### The project is extracting the most recent Covid-19 data, applying transformations to it and loading the files to an Azure Blob Storage. 
+#### The project is about extracting the most recent Covid-19 data, applying transformations to it, analysing it, and loading it to an Azure Blob Storage as parquet files. 
 
 ## Decription
 
 #### This project consists of jupyter notebooks. Files that are updated on a daily basis are being downloaded to obtain the latest Covid-19 cases and vaccines information. This data is then transformed and saved to Azure Blob Storage. Later it is combined with countries information (e.g population, density, life expectency) to produce visualisations. The whole process is controlled by the 'pipeline' notebook, which executes all other notebooks in particular order. All results are visible within the 'pipeline' notebook, when it gets executed.
+
+### Raw and Processed foldes
+
+#### The 'Raw' folder contains the raw files that are being downloaded. The 'Processed' folder contains the enriched files that are later being used for data analysis and uploaded to Azure Blob Storage
 
 ### funcs.ipynb
 

@@ -1,4 +1,6 @@
 # Pandas ETL project about Covid-19
+#### Created by: Lyubomir Lirkov / lyubomir.lirkov@gmail.com
+#### Created date: November 2021
 
 ## Overview
 
@@ -6,7 +8,7 @@
 
 ## Decription
 
-#### This project consists of jupyter notebooks. 
+#### This project consists of jupyter notebooks. Files that are updated on a daily basis are being downloaded to obtain the latest Covid-19 cases and vaccines information. This data is then transformed and saved to Azure Blob Storage. Later it is combined with countries information (e.g population, density, life expectency) to produce visualisations. The whole process is controlled by the 'pipeline' notebook, which executes all other notebooks in particular order. All results are visible within the 'pipeline' notebook, when it gets executed.
 
 ### funcs.ipynb
 
@@ -24,3 +26,18 @@
 
 #### ETL_cases.ipynb reads the latest Covid-19 cases file from the 'Raw' folder, apply transformations to it and saves it to the 'Processed' folder and also to a 'Processed' container in Azure Blob Storage
 
+### ETL_vaccines.ipynb
+
+#### ETL_vaccines.ipynb reads the latest Covid-19 vaccines file from the 'Raw' folder, apply transformations to it and saves it to the 'Processed' folder and also to a 'Processed' container in Azure Blob Storage
+
+### ETL_countries.ipynb 
+
+#### ETL_countries.ipynb downloads transforms countries data, which is later used in combination with Covid-19 data for data analysis. An example is population data, which helps to find the ratio of new cases to population and compare different countries.
+
+### merge_processed_datasets.ipynb 
+
+#### merge_processed_datasets.ipynb is merging the transformed Covid-19 cases and vaccines data into one file, which is later used for data analysis.
+
+### data_analysis.ipynb
+
+#### data_analysis.ipynb contains data analysis and visualisations, which provide useful insides. All produced visualisations are visible when pipeline.ipynb is executed. 
